@@ -111,7 +111,7 @@ class TypingText:
 
 
 mixer.init()
-mixer.music.load('ChatWRD-Corporatebabble/at the circus (compressed to 20000 sample rate).wav')
+mixer.music.load('at the circus (compressed to 20000 sample rate).wav')
 mixer.music.play(loops=-1)
 window = tk.Tk()
 window.title('ChatWRD: CORPORATEBABBLE')
@@ -119,7 +119,7 @@ window.geometry('600x600')
 canvas = tk.Canvas(window, width=600, height=600)
 canvas.pack()
 rand_num = random.randint(1, 31)
-image_path = 'ChatWRD-Corporatebabble/creepy office space.jpg'
+image_path = 'creepy office space.jpg'
 image = Image.open(image_path)
 image = image.resize((600, 600))
 tk_image = ImageTk.PhotoImage(image)
@@ -152,7 +152,7 @@ def button_click():
     print(f'Menu option: {var.get()}')
     
     if __name__ == '__main__':
-        generator = TextGenerator('ChatWRD-Corporatebabble/corporatebabble.txt', user_input)
+        generator = TextGenerator('corporatebabble.txt', user_input)
         generator.train_model()
         generated_text = generator.generate_text(var.get())
         print(generated_text)
